@@ -5,4 +5,7 @@ def showmain(request):
     return render(request,'main/mainpage.html')
 
 def showsecond(request):
-    return render(request, 'main/show.html')
+    return render(request, 'main/second.html')
+
+def showfirst(request):
+    return render(request,'main/first.html')

@@ -1,134 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>정민주의 자기소개</title>
-    <link rel="stylesheet" href="maincss.css">
-</head>
-<body>
-    <header>
-        <br><br><br><br><br>
-        <h1>자기소개 페이지</h1>
-    </header>
-    <br>
-    <br>
-    <br><br><br><br>
-    <div>
-        <table class="table1">
-            <tr>
-                <td><a href="#introduction">나에 대한 소개</a></td>
-                <td><a href="#like">내가 좋아하는 것</a></td>
-            </tr>
-            <tr>
-                <td><a href="#recommend">나의 추천</a></td>
-                <td><a href="#sns">SNS</a></td>
-            </tr>
-        </table>
-    </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
-    <div id="introduction">  
-        <!-- 나에 대한 소개 -->
-        <img src="https://pbs.twimg.com/media/EhIO_LyVoAA2szZ.jpg" width=150px height=150px>
-        <br>
-        <ol>
-            <li><strong>이름:</strong> 정민주</li>
-            <li><strong>소속 :</strong> 산업시스템공학과(융합소프트웨어 연계전공)</li>
-            <li><strong>나이 :</strong></string> 23세 (18학번)</li>
-            <li><strong>지역 :</strong> 경기도 안산</li>
-            <li><strong>학력 : </strong><ul>
-                <li>해양초등학교 졸업</li>
-                <li>해양중학교 졸업</li>
-                <li>경안고등학교 졸업</li>
-                <li>동국대학교 3학년 재학</li>
-            </ul></li>
-        </ol>
-    </div>
-    <br><br><br><br><br><br><br>
-    <div id="like">
-        <table class="table2">
-            <tr>
-                <td><img class="cimg1" src="http://image.newsis.com/2020/08/12/NISI20200812_0000581060_web.jpg">뮤지컬 감상</td>
-                <td><img class="cimg1" src="https://i2.wp.com/magazine.contenta.co/wp-content/uploads/2016/02/smartphone1-e1456384877980.png?fit=800%2C532&ssl=1">사진 찍기</td>
-            </tr>
-            <tr>
-                <td><img class="cimg1" src="https://t1.daumcdn.net/cfile/tistory/207ACA504E23A2861F">국내 소설 읽기</td>
-                <td><img class="cimg1" src="https://pbs.twimg.com/media/EarIFjEUcAEmaz2.jpg:large">고양이</td>
-            </tr>
-        </table>
-    </div>
+{% extends 'base.html' %}
+
+{% block content %}
     <br><br><br><br><br><br>
-    <div id="recommend">
-        <ul>
-            <li>
-                <strong>내가 추천하는 뮤지컬</strong> 
-                <table class="table2">
-                    <tr>
-                        <td><a href="https://youtu.be/SICcvIB6gGE" target="_blank">프랑켄슈타인
-                            </a></td>
-                        <td><a href="https://youtu.be/Z_A6l3dtDQE" target="_blank">뮤지컬 호프
-                        </a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://youtu.be/TDcOHM607DY" target="_blank">지킬앤하이드
-                        </a></td>
-                        <td><a href="https://youtu.be/s9epNEKb0R8" target="_blank">프랑켄슈타인
-                        </a></td>
-                    </tr>
-                </table>  
-                
-            </li>
-            <br><br><br><br><br>
-            <li>
-                <strong>내가 추천하는 소설 책</strong>
-                <table class="table2">
-                    <tr>
-                        <td>아가미</td>
-                        <td>아침을 볼 때마다 당신을 떠올릴 거야</td>
-                    </tr>
-                    <tr>
-                        <td>돌이킬 수 있는</td>
-                        <td>팽이</td>
-                    </tr>
-                </table>
-            </li>
-            <br><br><br><br><br>
-            <li>
-                <strong>내가 추천하는 영화</strong>
-                <table class="table2">
-                    <tr>
-    
-                        <td>라라랜드
-                            <br>
-                            <img src="https://lh3.googleusercontent.com/proxy/Q5M_mCi8CF5jDkPOe2Xeo2Xciv5W5ON5yk2vtvxOWXJaJOaHCc-7c77D1nTq6dYBPvWr2f4DLRjfung8yop8_e0D_xZGflxbPly7YTp7XdkLyiCdKoENdEvGzeFAhpfL1Jieai4wCZ6NYQvBVWTbO9Zwlp6J9NQ32lTroeutJZSjoJLp6BlLTRn0CyXkfsoEgHjyZf7Au7AsV_Kkx7zf-MgLEQ6PYRWbCh5XvtIcr9IetdZL0tsD6KmcGMheRl5RO1G1x2hjpMd4y9WQEr8">
-                        </td>
-                        <td>이터널 선샤인
-                            <br>
-                            <img src="https://lh3.googleusercontent.com/proxy/SBplPxAukB3MGC3qoZL01TqiNuF5mOlAWfQnJcItjcH2SWzLvbnJf9BZk4zRVfceToM-gWb6dKCj_qhD3Zpcx135YkHenjDhSSVBc__3qWtezmp2q6_WeS2WxjV-Ggtpq_dM6W1bd1oIl3yN0Y3-7P2ECwX-vgMbuHdOAd3LKfxdVfOGSDyYXbf59wutz40mrM4pDP_B9r8FS4SN8ptJBuCgNNVu7Nq_EHmFroEKsch5_LTS93dxr5PzTED1YDZZdJX5lsvpmyaLo2HOI_PJ7gDx3-Buxdi4gi7dI2rPGEu-QMUUQM73PWeeZ2Zpt1OgLdPoGoXg">
-                        </td>
-                    </tr>
-                </table>
-            </li>
-        </ul>
+    <div id="first_title">
+        <p1>안녕하세요:)</p1>
+        <br>
+        <p2>정민주입니다.</p2>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div id="sns">
-        <button type="button" onclick="window.open('https://www.instagram.com/9.38mz/')"><img src="https://lh3.googleusercontent.com/proxy/o3zFSPiLAvG5dvJqAbyPMWk7oI-eJol8feT_xGs8uBm1w-5r7hmpGxBWZj9qxDHj62ZoB9IMF-0Qx1wBMCTHvel090VFVIiA9lgLP4oPL55IRSGo6OwQwD5J_n4qL7vLPKbUHWb9AxRAZzwKKFbJWKgBL8HJawqhOR_bc_wDZc1XQmAbZCmOfyLIxAnq30q-sKzzkmuuPmtpzf0rqnlRI7sIBxZSv9bPYCG2zQVtWb5-dms9JIq8FrCWZDfh0b76JIa9mTg6xyzv6FxFaMa9lKjWdqsvpA9GBs14_lcRWg" alt="" width=100px height=80px></button>
-        <button type="button" onclick="window.open('https://github.com/JoungMinJu')"><img src="https://img.icons8.com/ios/452/github.png" alt="" width=100px height=80px></button>
-
+    <div id='second_content'>
+        <h6>
+            <br><br><br><br>
+            > IntroducePage를 누르면 자기소개 페이지로 넘어갑니다.
+            <br><br>
+            > When_I_was_young에는 어릴 적 사진이 게시되어있습니다.
+        </h6>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-    <div>
-        <p>감사합니다:)</p>
-        <br><br><br><br><br>
-        <img src="https://thumbs.gfycat.com/InsignificantPlayfulCanine-size_restricted.gif">
-        
-    </div>
-
-    
-
-    
-</body>
-</html>
+{% endblock %}
