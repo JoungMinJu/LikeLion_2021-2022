@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+
 *{ 
     margin: 0 auto;
 }
 body {
     background: linear-gradient(to right, #ffc3a0, #FFAFBD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
  }
+
+
+
+
  #first_title{
      text-align:center;
      font-size:50px;
@@ -18,4 +24,8 @@ body {
 }
 #img{
     text-align:center;
+}
+#bd{
+    text-align:center;
+
 }
