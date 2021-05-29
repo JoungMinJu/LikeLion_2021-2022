@@ -17,7 +17,7 @@
     </div>
     <br><br><br><br>
     <div id='bd'>
-        <h4><a href="{%url 'new'%}">글쓰기</a></h4>
+        <h4><a href="{%url 'main:new'%}">글쓰기</a></h4>
     </div>
     
     <br><br><br><br>
@@ -29,7 +29,7 @@
             <h5>{{post.title}}</h5>
             {{post.writer}}<br>
             {{post.summary}}<br>
-            <a href="{%url 'detail' post.id %}">..자세히</a>
+            <a href="{%url 'main:detail' post.id %}">..자세히</a>
             <br>
         </div>
         {%endfor%}
