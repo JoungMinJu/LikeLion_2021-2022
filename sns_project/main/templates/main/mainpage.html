@@ -21,6 +21,8 @@
     </div>
     
     <br><br><br><br>
+
+    {% if user.is_authenticated %}
     <h3 id='second_content'> 글 목록</h3>
 
     <div id='bd'>
@@ -34,5 +36,10 @@
         </div>
         {%endfor%}
     </div>
- 
+    {% else %}
+        <h3 id="second_content">로그인 후 이용가능</h3>
+        <a href="{% url 'account_login' %}" class="btn btn-warning" >로그인</a>
+        <a href="{% url 'account_signup' %}" class="btn btn-warning" >회원가입</a>
+    {% endif %}
 {% endblock %}
+<br><br><br><br><br><br>
