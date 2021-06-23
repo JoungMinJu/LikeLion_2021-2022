@@ -29,7 +29,16 @@
         {% for post in posts %}
         <div>
             <h5>{{post.title}}</h5>
-            {{post.writer}}<br>
+            {% if blog.writer %}
+            {% if 'user' in blog.writer.username %}
+            작성자 : {{ blog.writer.last_name }} {{ blog.writer.first_name }}
+            {% else %}
+            작성자 : {{ blog.writer }}
+            {% endif %}
+            {% else %}  
+            작성자 : 알 수 없음
+            {% endif %}
+            <br>
             {{post.summary}}<br>
             <a href="{%url 'main:detail' post.id %}">..자세히</a>
             <br>
