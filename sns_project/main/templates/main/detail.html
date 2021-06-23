@@ -5,11 +5,11 @@
 
 <h1>{{post.title}}</h1>
 
-{% if blog.writer %}
-{% if 'user' in blog.writer.username %}
-작성자 : {{ blog.writer.last_name }} {{ blog.writer.first_name }}
+{% if post.writer %}
+{% if 'user' in post.writer.username %}
+작성자 : {{ post.writer.last_name }} {{ post.writer.first_name }}
 {% else %}
-작성자 : {{ blog.writer }}
+작성자 : {{ post.writer }}
 {% endif %}
 {% else %}
 작성자 : 알 수 없음
