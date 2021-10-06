@@ -16,7 +16,9 @@ def helloAPI(request):
 @api_view(['GET'])
 def randomQuiz(request, id):
     totalQuizs=Quiz.objects.all()
+    #id번째 숫자로 뽑을 것
     randomQuizs=random.sample(list(totalQuizs),id)
     serializer=QuizSerializer(randomQuizs, many=True)
+    #many=True 다수의 데이터에 대해서도 직렬화(JSON화)가 진행됨.
     return Response(serializer.data)
     
