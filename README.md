@@ -1,5 +1,4 @@
 # rest_api
-rest_api 세션 
 
 
 <h5>API 뷰 감싸기</h5>
