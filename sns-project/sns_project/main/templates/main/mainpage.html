@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br><br><br><br><br><br>
+    <div id="first_title">
+        <p1>안녕하세요:)</p1>
+        <br>
+        <p2>정민주입니다.</p2>
+    </div>
+    <div id='second_content'>
+        <h6>
+            <br><br><br><br>
+            > IntroducePage를 누르면 자기소개 페이지로 넘어갑니다.
+            <br><br>
+            > When_I_was_young에는 어릴 적 사진이 게시되어있습니다.
+        </h6>
+    </div>
+    <br><br><br><br>
+    <div id='bd'>
+        <h4><a href="{%url 'main:new'%}">글쓰기</a></h4>
+    </div>
+    
+    <br><br><br><br>
+
+    {% if user.is_authenticated %}
+    <h3 id='second_content'> 글 목록</h3>
+
+    <div id='bd'>
+        {% for post in posts %}
+        <div>
+            <h5>{{post.title}}</h5>
+            {% if post.writer %}
+        {% if 'user' in post.writer.username %}
+        작성자 : {{ post.writer.last_name }} {{ post.writer.first_name }}
+        {% else %}
+        작성자 : {{ post.writer }}
+        {% endif %}
+        {% else %}
+        작성자 : 알 수 없음
+        {% endif %}
+            <br>
+            {{post.summary}}<br>
+            <a href="{%url 'main:detail' post.id %}">..자세히</a>
+            <br>
+        </div>
+        {%endfor%}
+    </div>
+    {% else %}
+        <h3 id="second_content">로그인 후 이용가능</h3>
+        <a href="{% url 'account_login' %}" class="btn btn-warning" >로그인</a>
+        <a href="{% url 'account_signup' %}" class="btn btn-warning" >회원가입</a>
+    {% endif %}
+{% endblock %}
+<br><br><br><br><br><br>
